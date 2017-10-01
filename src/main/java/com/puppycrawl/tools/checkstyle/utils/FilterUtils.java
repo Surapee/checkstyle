@@ -51,7 +51,7 @@ public final class FilterUtils {
             final URL url = uriByFilename.toURL();
             sourceInput = url.openStream();
         }
-        catch (CheckstyleException | IOException ignored) {
+        catch (CheckstyleException | IOException ignored) { //file is NOT exist
             suppressionSourceExists = false;
         }
         finally {
@@ -59,7 +59,7 @@ public final class FilterUtils {
                 try {
                     sourceInput.close();
                 }
-                catch (IOException ignored) {
+                catch (IOException ignored) { //file is NOT exist
                     suppressionSourceExists = false;
                 }
             }
