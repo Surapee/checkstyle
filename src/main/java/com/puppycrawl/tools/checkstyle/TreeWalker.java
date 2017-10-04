@@ -117,6 +117,10 @@ public final class TreeWalker extends AbstractFileSetCheck implements ExternalRe
     public void setTabWidth(int tabWidth) {
         this.tabWidth = tabWidth;
     }
+    
+    public int getTabWidth(){
+        return this.tabWidth;
+    }
 
     /**
      * Sets cache file.
